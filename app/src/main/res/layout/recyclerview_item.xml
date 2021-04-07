@@ -16,6 +16,7 @@
         android:id="@+id/noteContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="5dp"
         android:maxHeight="320dp"
         android:gravity="start|top"
         android:textColor="@color/black"
