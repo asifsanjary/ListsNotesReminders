@@ -5,31 +5,49 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spannable;
+import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.style.StyleSpan;
 import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.text.HtmlCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.asifsanjary.myapplication.note_view.NoteViewModel;
 import com.asifsanjary.myapplication.repository.database.Note;
 
-import static androidx.core.text.HtmlCompat.TO_HTML_PARAGRAPH_LINES_INDIVIDUAL;
-
 public class TextEditor extends AppCompatActivity {
+
+    public static final String NOTE_KEY = "NOTE_KEY_37Y73";
+    public static final String NOTE_ID_KEY = "NOTE_ID_KEY_37Y73";
+    public static final String NOTE_TITLE_KEY = "NOTE_TITLE_KEY_37Y73";
+    public static final String NOTE_CONTENT_KEY = "NOTE_CONTENT_KEY_37Y73";
 
     private EditText editTextNoteTitle;
     private EditText editTextNoteContent;
     private NoteViewModel mNoteViewModel;
 
+    private boolean noteFound = false;
+    private String foundNoteTitle;
+    private String foundNoteContent;
+    private int foundNoteId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text_editor);
+
+        Bundle bundle = getIntent().getBundleExtra(NOTE_KEY);
+        if(bundle != null) {
+            foundNoteId = bundle.getInt(NOTE_ID_KEY);
+            foundNoteTitle = bundle.getString(NOTE_TITLE_KEY);
+            foundNoteContent = bundle.getString(NOTE_CONTENT_KEY);
+            Log.d("Text_Editor_sanjary ", foundNoteId + " " + foundNoteTitle + " " + foundNoteContent);
+            if (!foundNoteTitle.isEmpty()) noteFound = true;
+        }
 
         initView();
 
@@ -38,6 +56,13 @@ public class TextEditor extends AppCompatActivity {
     private void initView() {
         editTextNoteTitle = findViewById(R.id.note_title_edit_text);
         editTextNoteContent = findViewById(R.id.note_content_edit_text);
+
+        if(noteFound) {
+            editTextNoteTitle.setText(foundNoteTitle.toString());
+            SpannableString spannableString = new SpannableString(Html.fromHtml(foundNoteContent));
+            editTextNoteContent.setText(spannableString);
+        }
+
         mNoteViewModel = new ViewModelProvider(this).get(NoteViewModel.class);
         mNoteViewModel.initViewModel(getApplication());
         //TODO: Load text from server
@@ -103,6 +128,9 @@ public class TextEditor extends AppCompatActivity {
         String noteContent = Html.toHtml(spannableString);
 
         Note note = new Note();
+        if(noteFound) {
+            note.uid = foundNoteId;
+        }
         note.noteTitle = noteTitle;
         note.noteContent = noteContent;
 

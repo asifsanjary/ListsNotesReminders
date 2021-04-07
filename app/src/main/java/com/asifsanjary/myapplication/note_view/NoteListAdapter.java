@@ -5,6 +5,7 @@ import android.text.SpannableString;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,8 +21,15 @@ import static androidx.core.text.HtmlCompat.TO_HTML_PARAGRAPH_LINES_INDIVIDUAL;
 
 public class NoteListAdapter extends ListAdapter<Note, NoteListAdapter.NoteViewHolder> {
 
-    public NoteListAdapter(@NonNull DiffUtil.ItemCallback<Note> diffCallback) {
+    public interface onRecyclerViewItemClickListener {
+        void onItemClickListener(View view, Note note);
+    }
+
+    private static onRecyclerViewItemClickListener mItemClickListener;
+
+    public NoteListAdapter(@NonNull DiffUtil.ItemCallback<Note> diffCallback, onRecyclerViewItemClickListener mItemClickListener) {
         super(diffCallback);
+        this.mItemClickListener = mItemClickListener;
     }
 
     @Override
@@ -48,14 +56,16 @@ public class NoteListAdapter extends ListAdapter<Note, NoteListAdapter.NoteViewH
         }
     }
 
-    static class NoteViewHolder extends RecyclerView.ViewHolder {
+    static class NoteViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final TextView noteTitle;
         private final TextView noteContent;
+        private Note note;
 
         private NoteViewHolder(View itemView) {
             super(itemView);
             noteTitle = itemView.findViewById(R.id.noteTitle);
             noteContent = itemView.findViewById(R.id.noteContent);
+            itemView.setOnClickListener(this);
         }
 
         public void bind(Note note) {
@@ -63,12 +73,20 @@ public class NoteListAdapter extends ListAdapter<Note, NoteListAdapter.NoteViewH
             SpannableString spannableNoteContent = new SpannableString(Html.fromHtml(note.noteContent));
             noteTitle.setText(note.noteTitle);
             noteContent.setText(spannableNoteContent);
+            this.note = note;
         }
 
         static NoteViewHolder create(ViewGroup parent) {
             View view = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.recyclerview_item, parent, false);
             return new NoteViewHolder(view);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (mItemClickListener != null) {
+                mItemClickListener.onItemClickListener(v, this.note);
+            }
         }
     }
 }

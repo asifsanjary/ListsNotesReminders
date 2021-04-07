@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public interface NoteDao {
     @Query("SELECT * FROM note WHERE note_title LIKE :title LIMIT 1")
     Note findByTitle(String title);
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(Note... notes);
 
     @Delete
