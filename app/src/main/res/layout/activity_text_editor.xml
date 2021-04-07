@@ -9,13 +9,14 @@
     tools:context=".TextEditor">
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/note_title_edit_text"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_width="320dp"
-        android:layout_height="320dp"
-        android:ems="10"
+        android:layout_height="wrap_content"
+        android:ems="20"
         android:gravity="start|top"
-        android:hint="Type your text here"
-        android:inputType="textMultiLine"
+        android:hint="Note Title"
         android:autofillHints="" />
 
     <LinearLayout
@@ -74,5 +75,24 @@
             android:src="@drawable/ic_baseline_keyboard_arrow_right_24"/>
 
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/note_content_edit_text"
+        android:layout_marginTop="20dp"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Type note contet here"
+        android:inputType="textMultiLine"
+        android:autofillHints="" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:onClick="saveAndExit"/>
 
 </LinearLayout>
