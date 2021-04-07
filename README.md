@@ -6,12 +6,18 @@ An Android App to record your notes, lists and reminders.
 3. Now connect your phone to PC via USB cable (Don't forget to turn on Developer Mode and USB Debugging and ticking the pop-up when Android Studio tries to connect with the phone).
 4. Run Android Studio.
 
+## Android Stack
+LiveData, ViewModel, Room Database
 ## Tasks
 - [x] Make A Simple Android App for editing
 - [ ] Make A Simple Website for editing
 - [ ] Sync the edited text between Android App and Website
-- [ ] Create Multiple Notes on Android App and Website
+- [x] Create and Display Multiple Notes on Android App and save on Local DB
+- [ ] Create Multiple Notes on Website
 - [ ] Edit multiple Notes on Android App and Website
+- [ ] Design a clean and simple Android Laoyut
 
 ## Here is the current screenshot of the development.
-![Alt text](./AppScreenshots/Screenshot_Apr_7_2021_2_19_31_AM.png?raw=true "Text Editing on Phone")
+Editor Layout             |  Front-page Layout
+:-------------------------:|:-------------------------:
+![Alt text](./AppScreenshots/Screenshot_20210407_193722_Lists_Notes_Reminders.png "Editor Layout")  |  ![Alt text](./AppScreenshots/Screenshot_20210407_193743_Lists_Notes_Reminders.png "Front-page Layout")
