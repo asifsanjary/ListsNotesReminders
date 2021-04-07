@@ -7,7 +7,7 @@ An Android App to record your notes, lists and reminders.
 4. Run Android Studio.
 
 ## Android Stack
-LiveData, ViewModel, Room Database
+LiveData, ViewModel, Room Database, ExecutorService.
 ## Tasks
 - [x] Make A Simple Android App for editing
 - [ ] Make A Simple Website for editing
