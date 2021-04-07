@@ -12,10 +12,11 @@ LiveData, ViewModel, Room Database, ExecutorService.
 - [x] Make A Simple Android App for editing
 - [ ] Make A Simple Website for editing
 - [ ] Sync the edited text between Android App and Website
-- [x] Create and Display Multiple Notes on Android App and save on Local DB
+- [x] Create Display Multiple Notes on Android App and save on Local DB
 - [ ] Create Multiple Notes on Website
-- [ ] Edit multiple Notes on Android App and Website
-- [ ] Design a clean and simple Android Laoyut
+- [x] Edit multiple Notes on Android App
+- [ ] Edit multiple Notes on Website
+- [ ] Add separate section for Lists, Notes and Reminders
 
 ## Here is the current screenshot of the development.
 Front-page Layout             |  Editor Layout
