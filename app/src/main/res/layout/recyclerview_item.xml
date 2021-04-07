@@ -3,22 +3,21 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="15dp">
+    android:layout_margin="5dp"
+    android:background="@drawable/rounded_corner_layout">
     <TextView
         android:id="@+id/noteTitle"
         style="@style/note_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:background="@android:color/holo_orange_light" />
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/noteContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:maxHeight="320dp"
         android:gravity="start|top"
-        android:textColor="@color/black"
-        android:background="#DDBB76" />
+        android:paddingLeft="8dp"
+        android:textAppearance = "@android:style/TextAppearance.Medium"
+        android:textColor="@color/black" />
 </LinearLayout>
