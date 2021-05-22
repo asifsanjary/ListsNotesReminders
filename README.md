@@ -1,4 +1,4 @@
-# Lists Notes Reminders App and Website
+# Lists Notes Reminders App
 An Android App to record your notes, lists and reminders.
 ## How to run the app
 1. Open Android Studio on your PC.
@@ -10,12 +10,8 @@ An Android App to record your notes, lists and reminders.
 LiveData, ViewModel, Room Database, ExecutorService.
 ## Tasks
 - [x] Make A Simple Android App for editing
-- [ ] Make A Simple Website for editing
-- [ ] Sync the edited text between Android App and Website
 - [x] Create Display Multiple Notes on Android App and save on Local DB
-- [ ] Create Multiple Notes on Website
 - [x] Edit multiple Notes on Android App
-- [ ] Edit multiple Notes on Website
 - [ ] Add separate section for Lists, Notes and Reminders
 
 ## Here is the current screenshot of the development.
