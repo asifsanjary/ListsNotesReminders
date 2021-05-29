@@ -1,5 +1,5 @@
-# Lists Notes Reminders App
-An Android App to record your notes, lists and reminders.
+# To-Dos Notes Reminders App
+An Android App to record your notes, todos and reminders.
 ## How to run the app
 1. Open Android Studio on your PC.
 2. Select **Get from Version Control**, Paste the url `https://github.com/asifsanjary/ListsNotesReminders.git` and Clone the project.
@@ -7,12 +7,16 @@ An Android App to record your notes, lists and reminders.
 4. Run Android Studio.
 
 ## Android Stack
-LiveData, ViewModel, Room Database, ExecutorService.
+LiveData, ViewModel, Room Database, ExecutorService
+
 ## Tasks
-- [x] Make A Simple Android App for editing
+- [x] Make A Simple Android App for note editing
 - [x] Create Display Multiple Notes on Android App and save on Local DB
 - [x] Edit multiple Notes on Android App
-- [ ] Add separate section for Lists, Notes and Reminders
+- [ ] Add separate section for ToDos, Notes and Reminders
+- [ ] Add ToDo Page
+- [ ] Add Reminders Page
+- [ ] Export All Data
 
 ## Here is the current screenshot of the development.
 Front-page Layout             |  Editor Layout

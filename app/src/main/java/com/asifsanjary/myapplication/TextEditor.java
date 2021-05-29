@@ -58,7 +58,7 @@ public class TextEditor extends AppCompatActivity {
         editTextNoteContent = findViewById(R.id.note_content_edit_text);
 
         if(noteFound) {
-            editTextNoteTitle.setText(foundNoteTitle.toString());
+            editTextNoteTitle.setText(foundNoteTitle);
             SpannableString spannableString = new SpannableString(Html.fromHtml(foundNoteContent));
             editTextNoteContent.setText(spannableString);
         }
@@ -77,6 +77,7 @@ public class TextEditor extends AppCompatActivity {
 
         editTextNoteContent.setText(spannableString);
     }
+
     public void buttonItalics(View view){
         Spannable spannableString = new SpannableStringBuilder(editTextNoteContent.getText());
         spannableString.setSpan(new StyleSpan(Typeface.ITALIC),
@@ -87,6 +88,7 @@ public class TextEditor extends AppCompatActivity {
         editTextNoteContent.setText(spannableString);
 
     }
+
     public void buttonUnderline(View view){
         Spannable spannableString = new SpannableStringBuilder(editTextNoteContent.getText());
         spannableString.setSpan(new UnderlineSpan(),
@@ -101,7 +103,6 @@ public class TextEditor extends AppCompatActivity {
         String stringText = editTextNoteContent.getText().toString();
         editTextNoteContent.setText(stringText);
     }
-
 
     public void buttonAlignmentLeft(View view){
         editTextNoteContent.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
