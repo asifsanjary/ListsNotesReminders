@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.asifsanjary.myapplication.note_view.NoteViewModel;
-import com.asifsanjary.myapplication.repository.database.Note;
+import com.asifsanjary.myapplication.repository.database.entity.Note;
 
 public class TextEditor extends AppCompatActivity {
 

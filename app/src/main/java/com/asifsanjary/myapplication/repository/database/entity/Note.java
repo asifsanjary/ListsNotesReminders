@@ -1,6 +1,4 @@
-package com.asifsanjary.myapplication.repository.database;
-
-import android.text.Html;
+package com.asifsanjary.myapplication.repository.database.entity;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
