@@ -1,4 +1,4 @@
-package com.asifsanjary.myapplication;
+package com.asifsanjary.myapplication.note_view;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -16,10 +16,11 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.asifsanjary.myapplication.note_view.NoteViewModel;
+import com.asifsanjary.myapplication.MainActivity;
+import com.asifsanjary.myapplication.R;
 import com.asifsanjary.myapplication.repository.database.entity.Note;
 
-public class TextEditor extends AppCompatActivity {
+public class NoteEditorActivity extends AppCompatActivity {
 
     public static final String NOTE_KEY = "NOTE_KEY_37Y73";
     public static final String NOTE_ID_KEY = "NOTE_ID_KEY_37Y73";
@@ -38,7 +39,7 @@ public class TextEditor extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_text_editor);
+        setContentView(R.layout.note_editor_activity_layout);
 
         Bundle bundle = getIntent().getBundleExtra(NOTE_KEY);
         if(bundle != null) {

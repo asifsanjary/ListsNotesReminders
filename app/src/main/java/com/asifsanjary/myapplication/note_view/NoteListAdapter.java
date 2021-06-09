@@ -74,7 +74,7 @@ public class NoteListAdapter extends ListAdapter<Note, NoteListAdapter.NoteViewH
 
         static NoteViewHolder create(ViewGroup parent) {
             View view = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.recyclerview_item, parent, false);
+                    .inflate(R.layout.note_recyclerview_item, parent, false);
             return new NoteViewHolder(view);
         }
 
