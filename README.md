@@ -6,6 +6,12 @@ An Android App to record your notes, todos and reminders.
 
 [Click to download apk](https://github.com/asifsanjary/ListsNotesReminders/releases/download/0.02/Todos.Notes.Reminders.apk)
 
+## Here is the current screenshot of the development.
+
+|                                To-Do List                                 |                                Notes List                                 |                                Note Editor                                 |
+| :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :------------------------------------------------------------------------: |
+| ![Alt text](./AppScreenshots/Screenshot_20210614-003806.png "To-Do List") | ![Alt text](./AppScreenshots/Screenshot_20210614-005313.png "Notes List") | ![Alt text](./AppScreenshots/Screenshot_20210614-005407.png "Note Editor") |
+
 ## Android Stack
 
 LiveData, ViewModel, Room Database, ExecutorService
@@ -19,12 +25,6 @@ LiveData, ViewModel, Room Database, ExecutorService
 - [x] Add ToDo Page
 - [ ] Add Reminders Page
 - [ ] Export All Data
-
-## Here is the current screenshot of the development.
-
-|                                To-Do List                                 |                                Notes List                                 |                                Note Editor                                 |
-| :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :------------------------------------------------------------------------: |
-| ![Alt text](./AppScreenshots/Screenshot_20210614-003806.png "To-Do List") | ![Alt text](./AppScreenshots/Screenshot_20210614-005313.png "Notes List") | ![Alt text](./AppScreenshots/Screenshot_20210614-005407.png "Note Editor") |
 
 ## License
 
