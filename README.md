@@ -19,6 +19,6 @@ LiveData, ViewModel, Room Database, ExecutorService
 - [ ] Export All Data
 
 ## Here is the current screenshot of the development.
-Front-page Layout             |  Editor Layout
-:-------------------------:|:-------------------------:
-![Alt text](./AppScreenshots/Screenshot_20210408_014123_Lists_Notes_Reminders.png "Front-page Layout")  |  ![Alt text](./AppScreenshots/Screenshot_20210408_014406_Lists_Notes_Reminders.png "Editor Layout")
+To-Do List | Notes List | Note Editor
+:-------------------------:|:-------------------------:|:-------------------------:
+![Alt text](./AppScreenshots/Screenshot_20210614-003806.png "To-Do List")  |  ![Alt text](./AppScreenshots/Screenshot_20210614-005313.png "Notes List") | ![Alt text](./AppScreenshots/Screenshot_20210614-005407.png "Note Editor")
