@@ -13,8 +13,8 @@ LiveData, ViewModel, Room Database, ExecutorService
 - [x] Make A Simple Android App for note editing
 - [x] Create Display Multiple Notes on Android App and save on Local DB
 - [x] Edit multiple Notes on Android App
-- [ ] Add separate section for ToDos, Notes and Reminders
-- [ ] Add ToDo Page
+- [x] Add separate section for ToDos, Notes and Reminders
+- [x] Add ToDo Page
 - [ ] Add Reminders Page
 - [ ] Export All Data
 

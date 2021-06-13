@@ -3,11 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_baseline_add_task_24.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_baseline_av_timer_24.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_baseline_center_focus_strong_24.xml" value="0.2111111111111111" />
         <entry key="app/src/main/res/drawable/ic_baseline_check_box_24.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/drawable/ic_baseline_check_box_outline_blank_24.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/drawable/ic_baseline_format_bold_24.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_baseline_format_clear_24.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_baseline_format_italic_24.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_baseline_format_underlined_24.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_baseline_notes_24.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2111111111111111" />
+        <entry key="app/src/main/res/drawable/ic_round_add_24.xml" value="0.2111111111111111" />
         <entry key="app/src/main/res/drawable/rounded_corner_layout.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/layout/fragment_reminders_list.xml" value="0.1" />
         <entry key="app/src/main/res/layout/todos_recyclerview_item.xml" value="0.1983695652173913" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2111111111111111" />
       </map>
     </option>
   </component>
