@@ -4,5 +4,7 @@
     <string name="todo_title">Todos</string>
     <string name="note_title">Notes</string>
     <string name="reminder_title">Reminders</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">This feature will be implemented soon…</string>
+    <string name="mark_to_do_as_complete">Mark To-Do as complete.</string>
+    <string name="mark_to_do_as_not_complete">Mark To-Do as not complete.</string>
 </resources>

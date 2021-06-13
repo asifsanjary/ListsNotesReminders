@@ -22,6 +22,8 @@ public interface TodoDao {
     @Query("SELECT * FROM todo WHERE uid IN (:todoIds)")
     LiveData<List<Todo>> loadAllTodosByIds(int[] todoIds); // TODO : should return only 1
 
+    // TODO: filter by completeness of todo
+
     @Query("SELECT * FROM todo WHERE todo_text LIKE :text LIMIT 1")
     Todo findTodosByText(String text);
 

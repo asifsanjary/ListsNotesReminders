@@ -55,6 +55,8 @@ public class TodosListFragment extends Fragment {
         final TodosListAdapter adapter = new TodosListAdapter(new TodosListAdapter.TodoDiff(), (v, todo) -> {
             // TODO: Add New / Edit / Mark Complete - Incomplete ToDo
 
+            todoViewModel.updateTodo(todo);
+
             Intent intent = new Intent(v.getContext(), TodosEditorActivity.class);
 
             Log.d(TAG, todo.uid + " "+ todo.toDoText);
@@ -64,7 +66,7 @@ public class TodosListFragment extends Fragment {
             bundle.putString(TodosEditorActivity.TODO_TEXT_KEY, todo.toDoText);
             intent.putExtra(TodosEditorActivity.TODO_KEY, bundle);
 
-            startActivity(intent);
+//            startActivity(intent);
         });
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

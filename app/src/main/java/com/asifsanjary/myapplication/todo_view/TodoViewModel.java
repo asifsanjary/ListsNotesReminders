@@ -23,4 +23,6 @@ public class TodoViewModel extends ViewModel {
     public LiveData<List<Todo>> getAllTodos() { return allTodos; }
 
     public void insertTodo(Todo todo) { repository.insertTodo(todo); }
+
+    public void updateTodo(Todo todo) { repository.updateTodo(todo); }
 }

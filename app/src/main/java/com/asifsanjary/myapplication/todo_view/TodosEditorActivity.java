@@ -67,7 +67,7 @@ public class TodosEditorActivity extends AppCompatActivity {
             todo.uid = foundNoteId;
         }
         todo.toDoText = todoText;
-
+        todo.isToDoComplete = false;
         todoViewModel.insertTodo(todo);
 
         // TODO: Handle this, not following best practices
