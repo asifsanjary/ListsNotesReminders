@@ -1,6 +1,6 @@
 # To-Dos Notes Reminders App
 
-An Android App to record your notes, todos and reminders.
+An Android App to manage your Todo-List, Notes and Reminders.
 
 ## Download App
 
