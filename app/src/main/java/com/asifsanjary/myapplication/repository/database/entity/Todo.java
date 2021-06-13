@@ -13,11 +13,13 @@ public class Todo {
     @ColumnInfo(name = "todo_text")
     public String toDoText;
 
+    @ColumnInfo(name = "is_todo_complete")
+    public boolean isToDoComplete;
+
     @ColumnInfo(name = "todo_creation_time")
-    public long noteCreationTime;
+    public long toDoCreationTime;
 
     @ColumnInfo(name = "todo_update_time")
-    public long noteUpdateTime;
-
+    public long toDoUpdateTime;
     //TODO: Note Tagging with Tasks and Lists via uid
 }

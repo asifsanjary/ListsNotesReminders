@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Todos Notes and Reminders</string>
     <string name="add_word">New Note</string>
+    <string name="todo_title">Todos</string>
+    <string name="note_title">Notes</string>
+    <string name="reminder_title">Reminders</string>
+    <string name="hello_blank_fragment">This feature will be implemented soon…</string>
+    <string name="mark_to_do_as_complete">Mark To-Do as complete.</string>
+    <string name="mark_to_do_as_not_complete">Mark To-Do as not complete.</string>
 </resources>

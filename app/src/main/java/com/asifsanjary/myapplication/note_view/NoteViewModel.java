@@ -1,6 +1,6 @@
 package com.asifsanjary.myapplication.note_view;
 
-import android.app.Application;
+import android.content.Context;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
@@ -13,14 +13,14 @@ import java.util.List;
 public class NoteViewModel extends ViewModel {
     private Repository repository;
 
-    private LiveData<List<Note>> mAllNotes;
+    private LiveData<List<Note>> allNotes;
 
-    public void initViewModel (Application application) {
-        repository = Repository.getRepositoryInstance(application);
-        mAllNotes = repository.getNoteList();
+    public void initViewModel (Context context) {
+        repository = Repository.getRepositoryInstance(context);
+        allNotes = repository.getNoteList();
     }
 
-    public LiveData<List<Note>> getAllNotes() { return mAllNotes; }
+    public LiveData<List<Note>> getAllNotes() { return allNotes; }
 
     public void insertNote(Note note) { repository.insertNote(note); }
 }
