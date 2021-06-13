@@ -25,3 +25,9 @@ LiveData, ViewModel, Room Database, ExecutorService
 |                                To-Do List                                 |                                Notes List                                 |                                Note Editor                                 |
 | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :------------------------------------------------------------------------: |
 | ![Alt text](./AppScreenshots/Screenshot_20210614-003806.png "To-Do List") | ![Alt text](./AppScreenshots/Screenshot_20210614-005313.png "Notes List") | ![Alt text](./AppScreenshots/Screenshot_20210614-005407.png "Note Editor") |
+
+## License
+
+Copyright (c) Asif Sanjary. All rights reserved.
+
+Licensed under the [GPL-3.0 License](LICENSE) license.
