@@ -10,7 +10,7 @@ An Android App to manage your Todo-List, Notes and Reminders.
 
 |                                To-Do List                                 |                                Notes List                                 |                                Note Editor                                 |
 | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :------------------------------------------------------------------------: |
-| ![Alt text](./AppScreenshots/Screenshot_20210614-003806.png "To-Do List") | ![Alt text](./AppScreenshots/Screenshot_20210614-005313.png "Notes List") | ![Alt text](./AppScreenshots/Screenshot_20210614-005407.png "Note Editor") |
+| ![Alt text](./AppScreenshots/todo_list_page.png "To-Do List") | ![Alt text](./AppScreenshots/note_list_page.png "Notes List") | ![Alt text](./AppScreenshots/Screenshot_20210614-005407.png "Note Editor") |
 
 ## Android Stack
 
