@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if(getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
         initView();
         /*
         TODO: Handle Connection with Server and Sync Text before going to edit text

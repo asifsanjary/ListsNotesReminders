@@ -17,6 +17,8 @@ public class Repository {
     private TodoDao todoDao;
     private LiveData<List<Note>> noteList;
     private LiveData<List<Todo>> todoList;
+    private LiveData<List<Todo>> completedTodoList;
+    private LiveData<List<Todo>> incompleteTodoList;
 
     private Repository(Context context) {
         initDb(context);
@@ -41,10 +43,20 @@ public class Repository {
         todoDao = db.todoDao();
         noteList = noteDao.getAllNotes();
         todoList = todoDao.getTodoList();
+        completedTodoList = todoDao.getAllCompletedTodos();
+        incompleteTodoList = todoDao.getAllIncompleteTodos();
     }
 
     public LiveData<List<Todo>> getTodoList() {
         return todoList;
+    }
+
+    public LiveData<List<Todo>> getCompletedTodoList() {
+        return completedTodoList;
+    }
+
+    public LiveData<List<Todo>> getAllIncompleteTodos() {
+        return incompleteTodoList;
     }
 
     public void insertTodo(Todo todo) {

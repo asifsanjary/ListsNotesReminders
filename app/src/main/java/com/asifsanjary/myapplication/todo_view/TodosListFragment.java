@@ -14,14 +14,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.asifsanjary.myapplication.R;
 import com.asifsanjary.myapplication.note_view.NoteEditorActivity;
+import com.asifsanjary.myapplication.todo_view.completed_todos_view.CompletedTodoActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class TodosListFragment extends Fragment {
-
-    private TodoViewModel todoViewModel;
     private static final String TAG = TodosListFragment.class.getSimpleName();
 
     public TodosListFragment() {}
@@ -48,10 +48,12 @@ public class TodosListFragment extends Fragment {
     }
 
     private void initView(View view) {
-        todoViewModel = new ViewModelProvider(this).get(TodoViewModel.class);
+        FloatingActionButton addNewTodoButton = view.findViewById(R.id.add_new_todo_fab);
+        ImageButton seeCompletedTodoButton = view.findViewById(R.id.todos_list_action_see_completed_tasks);
+        RecyclerView recyclerView = view.findViewById(R.id.todos_list_recyclerview);
+        TodoViewModel todoViewModel = new ViewModelProvider(this).get(TodoViewModel.class);
         todoViewModel.initViewModel(view.getContext());
 
-        RecyclerView recyclerView = view.findViewById(R.id.todos_list_recyclerview);
         final TodosListAdapter adapter = new TodosListAdapter(new TodosListAdapter.TodoDiff(), (v, todo) -> {
             // TODO: Add New / Edit / Mark Complete - Incomplete ToDo
 
@@ -68,16 +70,19 @@ public class TodosListFragment extends Fragment {
 
 //            startActivity(intent);
         });
+
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        todoViewModel.getAllTodos().observe(getViewLifecycleOwner(), adapter::submitList);
+        todoViewModel.getAllUncompletedTodos().observe(getViewLifecycleOwner(), adapter::submitList);
 
-        FloatingActionButton fab = view.findViewById(R.id.add_new_todo_fab);
-
-        fab.setOnClickListener(v -> {
-            // TODO: Add New ToDo
+        addNewTodoButton.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), TodosEditorActivity.class);
+            startActivity(intent);
+        });
+
+        seeCompletedTodoButton.setOnClickListener(v -> {
+            Intent intent = new Intent(v.getContext(), CompletedTodoActivity.class);
             startActivity(intent);
         });
     }

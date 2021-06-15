@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ListsNotesReminders">
+        <activity
+            android:name=".todo_view.completed_todos_view.CompletedTodoActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".note_view.NoteEditorActivity" />
         <activity android:name=".todo_view.TodosEditorActivity" />
         <activity android:name=".MainActivity">
