@@ -4,7 +4,7 @@ An Android App to manage your Todo-List, Notes and Reminders.
 
 ## Download App
 
-[Click to download apk](https://github.com/asifsanjary/ListsNotesReminders/releases/download/0.02/Todos.Notes.Reminders.apk)
+[Click to download apk](https://github.com/asifsanjary/ListsNotesReminders/releases/download/v0.04/Todos.Notes.Reminders.apk)
 
 ## Here is the current screenshot of the development.
 
